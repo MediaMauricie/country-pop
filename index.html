@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Média Mauricie × Country Pop 103.1 — Forfaits mensuels photo &amp; vidéo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;background:#f5f5f5;color:#2d2d2d;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+header{background:#fff;border-bottom:1px solid #ebebeb;padding:32px 24px 40px;}
+.header-inner{max-width:960px;margin:0 auto;}
+.header-logo{height:36px;object-fit:contain;margin-bottom:28px;}
+h1{font-size:clamp(26px,4vw,42px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin-bottom:14px;color:#2d2d2d;}
+h1 span{color:#c0392b;}
+.header-desc{font-size:13px;color:#666;line-height:1.75;font-weight:500;max-width:620px;margin-bottom:14px;}
+.header-desc strong{color:#2d2d2d;}
+.header-punch{font-size:12px;font-weight:700;color:#2d2d2d;border-left:3px solid #c0392b;padding-left:12px;}
+
+main{max-width:960px;margin:0 auto;padding:48px 24px 64px;}
+
+.section-label{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:20px;font-size:10px;font-weight:700;}
+.pill svg{width:11px;height:11px;flex-shrink:0;}
+.pill-red{background:#c0392b;color:#fff;}
+.pill-dark{background:#2d2d2d;color:#fff;}
+.section-sub-label{font-size:10px;color:#aaa;font-weight:600;}
+
+.img-divider{border-radius:14px;overflow:hidden;margin:24px 0;height:140px;background:#2d2d2d;}
+.img-divider img{width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.85;}
+
+/* FORFAIT CARDS — identical structure */
+.forfait{background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;margin-bottom:10px;}
+.forfait.premium{border-top:3px solid #c0392b;}
+.forfait-grid{display:grid;grid-template-columns:260px 1fr;}
+.f-left{padding:28px 24px;border-right:1px solid #f0f0f0;display:flex;flex-direction:column;}
+.f-right{padding:28px 24px;}
+
+.f-type{font-size:9px;font-weight:700;letter-spacing:2px;color:#bbb;margin-bottom:8px;}
+.f-name{font-size:17px;font-weight:800;color:#2d2d2d;line-height:1.2;margin-bottom:16px;}
+.f-name span{color:#c0392b;}
+.f-price{font-size:40px;font-weight:900;color:#2d2d2d;letter-spacing:-2px;line-height:1;}
+.f-price-unit{font-size:11px;font-weight:500;color:#aaa;margin-top:3px;}
+.f-duration{font-size:11px;font-weight:600;color:#c0392b;margin-top:5px;}
+
+.f-revente{margin-top:14px;background:#f9f9f9;border:1px solid #ebebeb;border-radius:9px;padding:10px 13px;}
+.f-revente-label{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#bbb;margin-bottom:3px;}
+.f-revente-price{font-size:14px;font-weight:800;color:#2d2d2d;}
+
+.f-upgrade{margin-top:10px;background:#f5f5f5;border:1.5px dashed #ddd;border-radius:9px;padding:10px 13px;}
+.f-upgrade-label{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#aaa;margin-bottom:3px;}
+.f-upgrade-price{font-size:14px;font-weight:800;color:#2d2d2d;}
+.f-upgrade-revente{font-size:10px;color:#aaa;margin-top:2px;}
+
+.f-engagement{margin-top:12px;font-size:10.5px;color:#bbb;font-weight:500;}
+
+.f-loyalty{margin-top:14px;display:flex;flex-direction:column;gap:5px;}
+.f-loyalty-title{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#bbb;margin-bottom:2px;}
+.f-loyalty-row{display:flex;align-items:center;gap:8px;background:#f9f9f9;border:1px solid #f0f0f0;border-radius:8px;padding:6px 10px;}
+.f-badge{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#2d2d2d;color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.f-badge.red{background:#c0392b;}
+.f-loyalty-text{font-size:10.5px;font-weight:600;color:#444;line-height:1.35;}
+.f-loyalty-text span{color:#bbb;font-weight:500;display:block;font-size:10px;}
+
+.f-group-title{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#bbb;margin-top:18px;margin-bottom:8px;}
+.f-group-title:first-child{margin-top:0;}
+.f-group-title svg{width:10px;height:10px;flex-shrink:0;}
+.f-items{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.f-items li{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:500;color:#444;line-height:1.55;}
+.ci{color:#2d2d2d;font-size:10px;flex-shrink:0;margin-top:3px;font-weight:800;}
+
+.inclus-strip{background:#2d2d2d;border-radius:0 0 14px 14px;padding:9px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.inclus-label{font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.3);white-space:nowrap;flex-shrink:0;}
+.inclus-items{display:flex;gap:5px;flex-wrap:wrap;}
+.inclus-item{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:3px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.6);}
+
+.table-title{font-size:18px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;margin-bottom:14px;}
+.table-wrap{background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;}
+table{width:100%;font-size:12px;border-collapse:collapse;}
+thead tr{background:#2d2d2d;color:#fff;}
+th{padding:12px 18px;font-weight:700;text-align:left;font-size:11px;}
+th:not(:first-child){text-align:center;}
+th small{display:block;color:rgba(255,255,255,0.4);font-weight:500;font-size:10px;margin-top:1px;}
+tbody tr{border-bottom:1px solid #f3f3f3;}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:#fafafa;}
+td{padding:10px 18px;color:#555;font-weight:500;}
+td:not(:first-child){text-align:center;}
+td:first-child{color:#2d2d2d;font-weight:600;}
+.check{color:#2d2d2d;font-weight:800;font-size:13px;}
+.dash{color:#ddd;}
+.td-note{font-size:11px;color:#888;}
+
+.cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.cond-card{background:#fff;border:1px solid #e8e8e8;border-radius:14px;padding:20px;}
+.cond-title{font-size:12px;font-weight:700;color:#2d2d2d;margin-bottom:10px;}
+.cond-items{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.cond-items li{display:flex;align-items:flex-start;gap:7px;font-size:11.5px;color:#555;line-height:1.55;font-weight:500;}
+.cond-items li strong{color:#2d2d2d;}
+
+.taxes-note{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:13px 18px;display:flex;align-items:flex-start;gap:10px;}
+.taxes-note svg{width:14px;height:14px;color:#bbb;flex-shrink:0;margin-top:2px;}
+.taxes-body{font-size:11.5px;color:#888;line-height:1.65;}
+
+.zone-wrap{border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;background:#fff;}
+.zone-map-container{height:300px;overflow:hidden;}
+.zone-map-container img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f9f9f9;}
+.zone-caption{padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid #f0f0f0;}
+.zone-caption-text{font-size:12px;font-weight:600;color:#2d2d2d;}
+.hors-zone{background:#fff8f0;border:1px solid #f5dfc0;border-radius:8px;padding:5px 12px;font-size:12px;font-weight:600;color:#b07030;}
+
+footer{background:#2d2d2d;color:#fff;}
+.footer-bar{height:3px;background:#c0392b;}
+.footer-inner{max-width:960px;margin:0 auto;padding:36px 24px;}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-bottom:26px;}
+.footer-logo{height:26px;object-fit:contain;margin-bottom:10px;}
+.footer-desc{color:rgba(255,255,255,0.33);font-size:12px;line-height:1.7;}
+.footer-col-title{font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.23);margin-bottom:10px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.footer-links li a,.footer-links li span{color:rgba(255,255,255,0.43);font-size:12px;}
+.footer-legal{color:rgba(255,255,255,0.27);font-size:11px;line-height:1.7;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-bottom p{color:rgba(255,255,255,0.17);font-size:11px;}
+
+@media(max-width:768px){
+  .forfait-grid{grid-template-columns:1fr;}
+  .f-left{border-right:none;border-bottom:1px solid #f0f0f0;}
+  .cond-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  main{padding:32px 16px 48px;}
+  header{padding:22px 16px 32px;}
+  .zone-map-container{height:220px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <img src="https://www.dropbox.com/scl/fi/f61murpgctm4c6cgflrfk/Media-Mauricie_logo_M-coul.png?rlkey=s0lxrnskgptz61oevc1z1nuu9&st=n007snkq&dl=1" alt="Média Mauricie" class="header-logo">
+    <h1>Forfaits mensuels<br><span>photo &amp; vidéo</span></h1>
+    <p class="header-desc">Une offre développée en partenariat avec <strong>Country Pop 103.1</strong> pour fournir des visuels de haute qualité à leurs forfaits de gestion de contenu — optimisés pour performer organiquement sur les réseaux sociaux et rehausser l'image de leurs clients.</p>
+    <div class="header-punch">Une équipe d'ici, au service de l'image des gens d'ici.</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- FORFAIT 1 — PHOTO & VIDÉO -->
+  <div class="section-label">
+    <span class="pill pill-red">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+      Photo &amp; vidéo complet
+    </span>
+  </div>
+
+  <div class="forfait premium">
+    <div class="forfait-grid">
+      <div class="f-left">
+        <div class="f-type">Forfait mensuel · Offre partenariat</div>
+        <div class="f-name">Photo &amp; vidéo<br><span>complet</span></div>
+        <div class="f-price">1 800$</div>
+        <div class="f-price-unit">/ mois + tx</div>
+        <div class="f-duration">2h sur place — photo &amp; vidéo combinés</div>
+        <div class="f-revente">
+          <div class="f-revente-label">Prix de revente suggéré</div>
+          <div class="f-revente-price">2 000$ / mois + tx</div>
+        </div>
+        <div class="f-engagement">Engagement minimum 3 mois</div>
+        <div class="f-loyalty">
+          <div class="f-loyalty-title">Avantages fidélité</div>
+          <div class="f-loyalty-row">
+            <div class="f-badge">6m</div>
+            <div class="f-loyalty-text">1 reel 30s gratuit<span>offert au 6e mois</span></div>
+          </div>
+          <div class="f-loyalty-row">
+            <div class="f-badge red">12m</div>
+            <div class="f-loyalty-text">12e mois sur nous<span>entièrement gratuit</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="f-right">
+        <div class="f-group-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+          Photo
+        </div>
+        <ul class="f-items">
+          <li><span class="ci">✓</span>Shooting photo — 2h sur place</li>
+          <li><span class="ci">✓</span>25 photos pro retouchées en HD</li>
+          <li><span class="ci">✓</span>Drone — selon conditions &amp; réglementations</li>
+        </ul>
+        <div class="f-group-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+          Vidéo &amp; production
+        </div>
+        <ul class="f-items">
+          <li><span class="ci">✓</span>Tournage vidéo pro — 2h sur place</li>
+          <li><span class="ci">✓</span>Production reels cinématiques — 2×15s ou 1×30s</li>
+          <li><span class="ci">✓</span>Sous-titres optimisés &amp; logo animé</li>
+          <li><span class="ci">✓</span>Musique sous licence — banque Média Mauricie</li>
+        </ul>
+        <div class="f-group-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Livraison &amp; droits
+        </div>
+        <ul class="f-items">
+          <li><span class="ci">✓</span>Banque d'images professionnelles — album Pixpa mis à jour chaque mois, lien de téléchargement fourni</li>
+          <li><span class="ci">✓</span>Déplacement inclus — zone Mauricie</li>
+          <li><span class="ci">✓</span>Licence d'utilisation commerciale illimitée</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- IMAGE DIVIDER -->
+  <div class="img-divider">
+    <img src="https://mediamauricie.com/wp-content/uploads/2026/03/photo-pro-banque-dimages-sur-mesure-mauricie-photographie-pro-video-marketing-videaste-drone.png" alt="Visuels Média Mauricie">
+  </div>
+
+  <!-- FORFAIT 2 — PHOTO SEULEMENT -->
+  <div class="section-label">
+    <span class="pill pill-dark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+      Photo seulement
+    </span>
+    <span class="section-sub-label">Banque d'images professionnelle</span>
+  </div>
+
+  <div class="forfait">
+    <div class="forfait-grid">
+      <div class="f-left">
+        <div class="f-type">Forfait mensuel · Offre partenariat</div>
+        <div class="f-name">Banque d'images<br><span>mensuelle</span></div>
+        <div class="f-price">650$</div>
+        <div class="f-price-unit">/ mois + tx</div>
+        <div class="f-duration">1h sur place — 25 photos HD</div>
+        <div class="f-revente">
+          <div class="f-revente-label">Prix de revente suggéré</div>
+          <div class="f-revente-price">700$ / mois + tx</div>
+        </div>
+        <div class="f-upgrade">
+          <div class="f-upgrade-label">↑ Option — 2h · 50 photos HD</div>
+          <div class="f-upgrade-price">800$ / mois + tx</div>
+          <div class="f-upgrade-revente">Prix de revente suggéré : 900$ / mois + tx</div>
+        </div>
+        <div class="f-engagement">Engagement minimum 3 mois</div>
+        <div class="f-loyalty">
+          <div class="f-loyalty-title">Avantages fidélité</div>
+          <div class="f-loyalty-row">
+            <div class="f-badge">6m</div>
+            <div class="f-loyalty-text">+50 photos bonus<span>offertes au 6e mois</span></div>
+          </div>
+          <div class="f-loyalty-row">
+            <div class="f-badge red">12m</div>
+            <div class="f-loyalty-text">12e mois sur nous<span>entièrement gratuit</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="f-right">
+        <div class="f-group-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+          Photo
+        </div>
+        <ul class="f-items">
+          <li><span class="ci">✓</span>Shooting photo — 1h sur terrain</li>
+          <li><span class="ci">✓</span>25 photos pro retouchées en HD</li>
+          <li><span class="ci">✓</span>Drone — selon conditions &amp; réglementations</li>
+          <li><span class="ci">✓</span>Photos lifestyle — activités, équipes, lieux, ambiance</li>
+        </ul>
+        <div class="f-group-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Livraison &amp; droits
+        </div>
+        <ul class="f-items">
+          <li><span class="ci">✓</span>Banque d'images professionnelles — album Pixpa mis à jour chaque mois, lien de téléchargement fourni</li>
+          <li><span class="ci">✓</span>Déplacement inclus — zone Mauricie</li>
+          <li><span class="ci">✓</span>Licence d'utilisation commerciale illimitée</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- COMPARATIF -->
+  <div style="margin-top:48px;margin-bottom:32px;">
+    <div class="table-title">Comparatif des forfaits</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Inclusions</th>
+            <th>Photo &amp; vidéo complet<small>1 800$/mois</small></th>
+            <th>Photo · 1h<small>650$/mois</small></th>
+            <th>Photo · 2h<small>800$/mois</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Shooting photo sur place</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Durée &amp; photos livrées</td><td class="td-note">2h · 25 photos</td><td class="td-note">1h · 25 photos</td><td class="td-note">2h · 50 photos</td></tr>
+          <tr><td>Tournage vidéo pro</td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>Production reels cinématiques</td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+          <tr><td>Drone</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Banque d'images Pixpa</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Déplacement zone Mauricie</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Licence d'utilisation commerciale</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Prix de revente suggéré</td><td class="td-note">2 000$/mois</td><td class="td-note">700$/mois</td><td class="td-note">900$/mois</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CONDITIONS -->
+  <div class="cond-grid" style="margin-bottom:32px;">
+    <div class="cond-card">
+      <div class="cond-title">📋 Pour démarrer</div>
+      <ul class="cond-items">
+        <li><span>·</span><span>Contrat signé + premier versement (2 mois) à la signature</span></li>
+        <li><span>·</span><span>Facturation mensuelle par la suite</span></li>
+        <li><span>·</span><span>Engagement minimum <strong>3 mois</strong></span></li>
+        <li><span>·</span><span>Tournage reportable si non utilisé dans le mois — l'objectif est une stratégie de contenu régulière pour faire croître les pages</span></li>
+      </ul>
+    </div>
+    <div class="cond-card">
+      <div class="cond-title">⚖️ Droits &amp; livraison</div>
+      <ul class="cond-items">
+        <li><span>·</span><span>Photos et contenu vidéo livrés en <strong>5–15 jours</strong></span></li>
+        <li><span>·</span><span>Le client reçoit une <strong>licence d'utilisation commerciale illimitée</strong> — réseaux, web, affichage, imprimé</span></li>
+        <li><span>·</span><span>Média Mauricie conserve le <strong>droit d'auteur</strong></span></li>
+        <li><span>·</span><span>Assurances RC — responsabilité civile professionnelle · activités &amp; drone</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TAXES -->
+  <div class="taxes-note" style="margin-bottom:32px;">
+    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <p class="taxes-body">Tous les prix sont en dollars canadiens, <strong>hors taxes</strong>. TPS (5%) et TVQ (9,975%) s'ajoutent au montant facturé.</p>
+  </div>
+
+  <!-- ZONE MAURICIE -->
+  <div class="zone-wrap">
+    <div class="zone-map-container">
+      <img src="https://www.dropbox.com/scl/fi/c1r0j7ya462m52q7ftcmz/zone-media-mauricie.jpg?rlkey=gtmqc52dt7xhp0gyefnd7c98n&st=rk2x07h6&dl=1" alt="Zone de service Média Mauricie">
+    </div>
+    <div class="zone-caption">
+      <div class="zone-caption-text">📍 Déplacement inclus — zone Mauricie</div>
+      <span class="hors-zone">Hors zone : +1$/km A/R</span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-bar"></div>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <img src="https://www.dropbox.com/scl/fi/qhxfse5gr6ceayoszzdy7/Media-Mauricie_logo_M-inv.png?rlkey=zgbcvozb0h80f4zq3ryhuqww7&st=zgo0wls7&dl=1" alt="Média Mauricie" class="footer-logo">
+        <p class="footer-desc">Production photo &amp; vidéo professionnelle en Mauricie. Une équipe d'ici, pour des gens d'ici.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:info@mediamauricie.com">info@mediamauricie.com</a></li>
+          <li><a href="https://www.mediamauricie.com" target="_blank">www.mediamauricie.com</a></li>
+          <li><span>(819) 852-0851</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <p class="footer-legal">Prix en dollars canadiens (CAD), taxes en sus (TPS/TVQ). Offre valide pour contrats signés en 2026. © Média Mauricie Inc. 2026</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Média Mauricie Inc. 2026</p>
+      <p>Offre tarifaire partenaire — Document confidentiel</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
