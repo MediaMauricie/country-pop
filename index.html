@@ -32,7 +32,6 @@ main{max-width:960px;margin:0 auto;padding:48px 24px 64px;}
 .img-divider{border-radius:14px;overflow:hidden;margin:24px 0;height:140px;background:#2d2d2d;}
 .img-divider img{width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.85;}
 
-/* FORFAIT CARDS — identical structure */
 .forfait{background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;margin-bottom:10px;}
 .forfait.premium{border-top:3px solid #c0392b;}
 .forfait-grid{display:grid;grid-template-columns:260px 1fr;}
@@ -57,13 +56,14 @@ main{max-width:960px;margin:0 auto;padding:48px 24px 64px;}
 
 .f-engagement{margin-top:12px;font-size:10.5px;color:#bbb;font-weight:500;}
 
-.f-loyalty{margin-top:14px;display:flex;flex-direction:column;gap:5px;}
-.f-loyalty-title{font-size:9px;font-weight:700;letter-spacing:1.5px;color:#bbb;margin-bottom:2px;}
-.f-loyalty-row{display:flex;align-items:center;gap:8px;background:#f9f9f9;border:1px solid #f0f0f0;border-radius:8px;padding:6px 10px;}
-.f-badge{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#2d2d2d;color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+/* FIDÉLITÉ — style Broadway */
+.f-loyalty{margin-top:14px;display:flex;flex-direction:column;gap:6px;}
+.f-loyalty-title{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;margin-bottom:4px;}
+.f-loyalty-row{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;background:#f9f9f9;border:1px solid #f0f0f0;border-radius:8px;}
+.f-badge{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#2d2d2d;color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
 .f-badge.red{background:#c0392b;}
-.f-loyalty-text{font-size:10.5px;font-weight:600;color:#444;line-height:1.35;}
-.f-loyalty-text span{color:#bbb;font-weight:500;display:block;font-size:10px;}
+.f-loyalty-text{font-size:11px;font-weight:700;color:#2d2d2d;line-height:1.35;}
+.f-loyalty-text span{color:#888;font-weight:500;display:block;font-size:10px;margin-top:1px;}
 
 .f-group-title{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#bbb;margin-top:18px;margin-bottom:8px;}
 .f-group-title:first-child{margin-top:0;}
@@ -71,11 +71,6 @@ main{max-width:960px;margin:0 auto;padding:48px 24px 64px;}
 .f-items{list-style:none;display:flex;flex-direction:column;gap:7px;}
 .f-items li{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:500;color:#444;line-height:1.55;}
 .ci{color:#2d2d2d;font-size:10px;flex-shrink:0;margin-top:3px;font-weight:800;}
-
-.inclus-strip{background:#2d2d2d;border-radius:0 0 14px 14px;padding:9px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.inclus-label{font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.3);white-space:nowrap;flex-shrink:0;}
-.inclus-items{display:flex;gap:5px;flex-wrap:wrap;}
-.inclus-item{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:3px 10px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.6);}
 
 .table-title{font-size:18px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;margin-bottom:14px;}
 .table-wrap{background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;}
@@ -93,6 +88,10 @@ td:first-child{color:#2d2d2d;font-weight:600;}
 .check{color:#2d2d2d;font-weight:800;font-size:13px;}
 .dash{color:#ddd;}
 .td-note{font-size:11px;color:#888;}
+.tr-bonus{background:#f9f9f9;}
+.tr-bonus td:first-child{color:#888;}
+.tr-bonus td{font-size:11px;}
+.td-red{color:#c0392b;font-weight:700;}
 
 .cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .cond-card{background:#fff;border:1px solid #e8e8e8;border-radius:14px;padding:20px;}
@@ -101,7 +100,7 @@ td:first-child{color:#2d2d2d;font-weight:600;}
 .cond-items li{display:flex;align-items:flex-start;gap:7px;font-size:11.5px;color:#555;line-height:1.55;font-weight:500;}
 .cond-items li strong{color:#2d2d2d;}
 
-.taxes-note{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:13px 18px;display:flex;align-items:flex-start;gap:10px;}
+.taxes-note{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:13px 18px;display:flex;align-items:flex-start;gap:10px;margin-bottom:32px;}
 .taxes-note svg{width:14px;height:14px;color:#bbb;flex-shrink:0;margin-top:2px;}
 .taxes-body{font-size:11.5px;color:#888;line-height:1.65;}
 
@@ -121,6 +120,7 @@ footer{background:#2d2d2d;color:#fff;}
 .footer-col-title{font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.23);margin-bottom:10px;}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:5px;}
 .footer-links li a,.footer-links li span{color:rgba(255,255,255,0.43);font-size:12px;}
+.footer-links li a:hover{color:rgba(255,255,255,.7);}
 .footer-legal{color:rgba(255,255,255,0.27);font-size:11px;line-height:1.7;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .footer-bottom p{color:rgba(255,255,255,0.17);font-size:11px;}
@@ -174,11 +174,11 @@ footer{background:#2d2d2d;color:#fff;}
           <div class="f-loyalty-title">Avantages fidélité</div>
           <div class="f-loyalty-row">
             <div class="f-badge">6m</div>
-            <div class="f-loyalty-text">1 reel 30s gratuit<span>offert au 6e mois</span></div>
+            <div class="f-loyalty-text">×2 photos / mois & +2 reels bonus offerts<span>Engagement 6 mois · 50 photos / mois · reels en fin de contrat</span></div>
           </div>
           <div class="f-loyalty-row">
             <div class="f-badge red">12m</div>
-            <div class="f-loyalty-text">12e mois sur nous<span>entièrement gratuit</span></div>
+            <div class="f-loyalty-text">1 mois complet gratuit<span>Engagement 12 mois · valeur 1 800$ + tx</span></div>
           </div>
         </div>
       </div>
@@ -214,7 +214,7 @@ footer{background:#2d2d2d;color:#fff;}
       </div>
     </div>
   </div>
-  <!-- IMAGE DIVIDER -->
+
   <div class="img-divider">
     <img src="https://mediamauricie.com/wp-content/uploads/2026/03/photo-pro-banque-dimages-sur-mesure-mauricie-photographie-pro-video-marketing-videaste-drone.png" alt="Visuels Média Mauricie">
   </div>
@@ -238,23 +238,18 @@ footer{background:#2d2d2d;color:#fff;}
         <div class="f-duration">1h sur place — 25 photos HD</div>
         <div class="f-revente">
           <div class="f-revente-label">Prix de revente suggéré</div>
-          <div class="f-revente-price">700$ / mois + tx</div>
-        </div>
-        <div class="f-upgrade">
-          <div class="f-upgrade-label">↑ Option — 2h · 50 photos HD</div>
-          <div class="f-upgrade-price">800$ / mois + tx</div>
-          <div class="f-upgrade-revente">Prix de revente suggéré : 900$ / mois + tx</div>
+          <div class="f-revente-price">750$ / mois + tx</div>
         </div>
         <div class="f-engagement">Engagement minimum 3 mois</div>
         <div class="f-loyalty">
           <div class="f-loyalty-title">Avantages fidélité</div>
           <div class="f-loyalty-row">
             <div class="f-badge">6m</div>
-            <div class="f-loyalty-text">+50 photos bonus<span>offertes au 6e mois</span></div>
+            <div class="f-loyalty-text">×2 photos / mois<span>Engagement 6 mois · 50 photos / mois</span></div>
           </div>
           <div class="f-loyalty-row">
             <div class="f-badge red">12m</div>
-            <div class="f-loyalty-text">12e mois sur nous<span>entièrement gratuit</span></div>
+            <div class="f-loyalty-text">1 mois complet gratuit<span>Engagement 12 mois · valeur 650$ + tx</span></div>
           </div>
         </div>
       </div>
@@ -269,6 +264,11 @@ footer{background:#2d2d2d;color:#fff;}
           <li><span class="ci">✓</span>Drone — selon conditions &amp; réglementations</li>
           <li><span class="ci">✓</span>Photos lifestyle — activités, équipes, lieux, ambiance</li>
         </ul>
+        <div style="margin-top:14px;background:#f5f5f5;border:1.5px dashed #ddd;border-radius:9px;padding:10px 14px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:4px;">↑ Option — 2h sur place</div>
+          <div style="font-size:13px;font-weight:800;color:#2d2d2d;">800$ / mois + tx · 50 photos HD</div>
+          <div style="font-size:10px;color:#aaa;margin-top:2px;">Prix de revente suggéré : 900$ / mois + tx</div>
+        </div>
         <div class="f-group-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
           Livraison &amp; droits
@@ -281,6 +281,7 @@ footer{background:#2d2d2d;color:#fff;}
       </div>
     </div>
   </div>
+
   <!-- COMPARATIF -->
   <div style="margin-top:48px;margin-bottom:32px;">
     <div class="table-title">Comparatif des forfaits</div>
@@ -303,7 +304,10 @@ footer{background:#2d2d2d;color:#fff;}
           <tr><td>Banque d'images Pixpa</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Déplacement zone Mauricie</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Licence d'utilisation commerciale</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-          <tr><td>Prix de revente suggéré</td><td class="td-note">2 000$/mois</td><td class="td-note">700$/mois</td><td class="td-note">900$/mois</td></tr>
+          <tr><td>Prix de vente</td><td class="td-note">1 800$ / mois</td><td class="td-note">650$ / mois</td><td class="td-note">800$ / mois</td></tr>
+          <tr><td>Revente suggérée</td><td class="td-note">2 000$ / mois</td><td class="td-note">750$ / mois</td><td class="td-note">900$ / mois</td></tr>
+          <tr class="tr-bonus"><td>✦ Bonus 6 mois</td><td class="td-red">×2 photos (50/mois) & +2 reels offerts</td><td class="td-red">×2 photos (50/mois)</td><td class="td-red">×2 photos (100/mois)</td></tr>
+          <tr class="tr-bonus"><td>✦ Bonus 12 mois</td><td colspan="3" style="text-align:center;color:#c0392b;font-weight:700;">🎁 1 mois complet gratuit — identique pour tous les forfaits</td></tr>
         </tbody>
       </table>
     </div>
@@ -326,19 +330,13 @@ footer{background:#2d2d2d;color:#fff;}
         <li><span>·</span><span>Photos et contenu vidéo livrés en <strong>5–15 jours</strong></span></li>
         <li><span>·</span><span>Le client reçoit une <strong>licence d'utilisation commerciale illimitée</strong> — réseaux, web, affichage, imprimé</span></li>
         <li><span>·</span><span>Média Mauricie conserve le <strong>droit d'auteur</strong></span></li>
-        <li><span>·</span><span>Assurances RC — responsabilité civile professionnelle · activités &amp; drone</span></li>
+        <li><span>·</span><span>Assurances responsabilité civile professionnelle — photo, vidéo &amp; drone</span></li>
       </ul>
     </div>
   </div>
 
-  <!-- TAXES -->
-  <div class="taxes-note" style="margin-bottom:32px;">
-    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-    <p class="taxes-body">Tous les prix sont en dollars canadiens, <strong>hors taxes</strong>. TPS (5%) et TVQ (9,975%) s'ajoutent au montant facturé.</p>
-  </div>
-
   <!-- ZONE MAURICIE -->
-  <div class="zone-wrap">
+  <div class="zone-wrap" style="margin-bottom:32px;">
     <div class="zone-map-container">
       <img src="https://www.dropbox.com/scl/fi/c1r0j7ya462m52q7ftcmz/zone-media-mauricie.jpg?rlkey=gtmqc52dt7xhp0gyefnd7c98n&st=rk2x07h6&dl=1" alt="Zone de service Média Mauricie">
     </div>
@@ -346,6 +344,43 @@ footer{background:#2d2d2d;color:#fff;}
       <div class="zone-caption-text">📍 Déplacement inclus — zone Mauricie</div>
       <span class="hors-zone">Hors zone : +1$/km A/R</span>
     </div>
+  </div>
+
+  <!-- MAURICIE EN LUMIÈRE -->
+  <div style="background:#2d2d2d;border-radius:14px;overflow:hidden;margin-bottom:28px;">
+    <div style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:240px;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;">✨ Offre exclusive · Plateforme régionale</div>
+        <div style="font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px;margin-bottom:10px;">Mauricie en lumière ✨</div>
+        <div style="font-size:11.5px;font-weight:500;color:rgba(255,255,255,.55);line-height:1.7;max-width:460px;">Vos photos rejoignent une banque de visuels professionnels accessible aux médias, entreprises et organismes de la Mauricie. <strong style="color:rgba(255,255,255,.85);">Signature d'une décharge requise</strong> — notre équipe ajoute une sélection d'images à la plateforme.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex-shrink:0;">
+        <div style="background:#fff;border-radius:12px;padding:14px 20px;text-align:center;">
+          <div style="font-size:28px;font-weight:800;color:#2d2d2d;line-height:1;">−50$</div>
+          <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#666;margin-top:4px;">/ mois sur votre forfait</div>
+        </div>
+        <a href="https://www.mediamauricie.com/mauricie-en-lumiere" target="_blank" style="display:inline-block;background:#fff;color:#2d2d2d !important;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:7px;text-decoration:none;white-space:nowrap;">Découvrir la plateforme →</a>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.05);border-top:1px solid rgba(255,255,255,.08);padding:16px 28px;display:flex;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;display:flex;align-items:flex-start;gap:10px;font-size:10.5px;font-weight:500;color:rgba(255,255,255,.6);line-height:1.55;min-width:180px;">
+        <span style="background:#fff;color:#2d2d2d;font-size:9px;font-weight:800;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">1</span>
+        Signature d'une décharge d'utilisation d'images sélectionnées
+      </div>
+      <div style="flex:1;display:flex;align-items:flex-start;gap:10px;font-size:10.5px;font-weight:500;color:rgba(255,255,255,.6);line-height:1.55;min-width:180px;">
+        <span style="background:#fff;color:#2d2d2d;font-size:9px;font-weight:800;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</span>
+        Notre équipe intègre les images choisies dans la banque régionale
+      </div>
+      <div style="flex:1;display:flex;align-items:flex-start;gap:10px;font-size:10.5px;font-weight:500;color:rgba(255,255,255,.6);line-height:1.55;min-width:180px;">
+        <span style="background:#fff;color:#2d2d2d;font-size:9px;font-weight:800;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</span>
+        Le rabais de 50$/mois est appliqué dès le mois suivant
+      </div>
+    </div>
+  </div>
+
+  <div class="taxes-note">
+    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <p class="taxes-body">Tous les prix sont en dollars canadiens, <strong>hors taxes</strong>. TPS (5%) et TVQ (9,975%) s'ajoutent au montant facturé.</p>
   </div>
 
 </main>
